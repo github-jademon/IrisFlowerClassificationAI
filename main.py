@@ -51,8 +51,10 @@ if __name__ == "__main__":
 
   # test();
 
-  print("훈련 점수 :",model.score(train_input, train_target))
-  print("테스트 점수 :",model.score(test_input, test_target))
+  print("-----------------------------------");
+  print("훈련 점수 :",model.score(train_input, train_target));
+  print("테스트 점수 :",model.score(test_input, test_target));
+  print("-----------------------------------");
 
   while True:
     sepal_length = float(input("꽃받침 가로길이 : "));
@@ -69,3 +71,4 @@ if __name__ == "__main__":
     
     predict = model.predict(pretreatment(np.array([[sepal_length, sepal_width, petal_length, petal_width]])));
     print("붓꽃 유형은 ","setosa" if(predict == 0) else "versicolor" if(predict == 1) else "virginica");
+    print("-----------------------------------");
